@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Alumno extends Usuario {
+
+    private String matricula;
+    private String carrera;
+
     @ManyToMany(mappedBy = "alumnos")
     private List<Curso> cursos;
 
@@ -18,4 +22,35 @@ public class Alumno extends Usuario {
 
     // Getters y Setters NO NEEDED CAUSE LOOMBOK FILL THE DETAILS
 
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
+    }
+
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
+    }
+
+    public void setAsignaciones(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
+    }
 }
