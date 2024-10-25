@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @MappedSuperclass
-@Inheritance(strategy = InheritanceType.JOINED)
 @Data  // Lombok generará getters y setters
 public class Usuario {
     @Id
