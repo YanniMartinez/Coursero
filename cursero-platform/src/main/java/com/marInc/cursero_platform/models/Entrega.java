@@ -14,7 +14,7 @@ public class Entrega {
 
     private String archivoUrl; // URL del archivo subido
     private LocalDate fechaEntrega;
-
+    private String aprobado;
     @ManyToOne
     private Asignacion asignacion;
 
@@ -72,5 +72,13 @@ public class Entrega {
 
     public void setCalificacion(Calificacion calificacion) {
         this.calificacion = calificacion;
+    }
+
+    public String getAprobado() {
+        return aprobado;
+    }
+
+    public void setAprobado(String aprobado) {
+        this.aprobado = aprobado;
     }
 }
