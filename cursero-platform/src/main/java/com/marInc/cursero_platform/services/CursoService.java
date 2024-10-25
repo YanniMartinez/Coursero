@@ -5,6 +5,8 @@ import com.marInc.cursero_platform.repositories.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.NoSuchElementException;
+
 @Service
 public class CursoService {
 
@@ -19,7 +21,7 @@ public class CursoService {
 
     //Haciendo uso del método fin para encontrar en base al ID
     public Curso obtenerCursoPorId(Long id) {
-        return cursoRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Curso no encontrado"));
+        return cursoRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Curso no encontrado"));
     }
 }
 

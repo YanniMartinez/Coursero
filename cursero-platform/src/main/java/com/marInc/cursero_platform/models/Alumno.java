@@ -4,9 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Alumno extends Usuario {
     @ManyToMany(mappedBy = "alumnos")
     private List<Curso> cursos;

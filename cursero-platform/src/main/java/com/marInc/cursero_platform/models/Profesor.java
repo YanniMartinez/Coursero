@@ -3,6 +3,7 @@ import java.util.List;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -11,5 +12,6 @@ public class Profesor extends Usuario {
     private List<Curso> cursos;
 
     // Getters y Setters
+
 }
 
