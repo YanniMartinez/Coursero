@@ -12,6 +12,7 @@ public class Curso {
     private Long id;
 
     private String nombre;
+    private String descripcion;
 
     @ManyToOne
     private Profesor profesor;
@@ -67,6 +68,14 @@ public class Curso {
 
     public void setAsignaciones(List<Asignacion> asignaciones) {
         this.asignaciones = asignaciones;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }
 
